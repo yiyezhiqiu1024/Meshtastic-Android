@@ -49,11 +49,11 @@ android {
             storePassword = keystoreProperties["storePassword"] as String?
         }
     }
-    compileSdk = 35
+    compileSdk = Configs.COMPILE_SDK
     defaultConfig {
         applicationId = Configs.APPLICATION_ID
-        minSdk = 26
-        targetSdk = 35
+        minSdk = Configs.MIN_SDK_VERSION
+        targetSdk = Configs.TARGET_SDK
         versionCode = System.getenv("VERSION_CODE")?.toIntOrNull() ?: 30630
         testInstrumentationRunner = "com.geeksville.mesh.TestRunner"
         buildConfigField("String", "MIN_FW_VERSION", "\"${Configs.MIN_FW_VERSION}\"")
